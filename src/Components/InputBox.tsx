@@ -1,11 +1,11 @@
-import React from "react"
+import React, { memo } from "react";
 
 type Props = {
     expression: string,
     setExpression: React.Dispatch<React.SetStateAction<any>>;
 };
 
-export default function InputBox(props:Props){
+export const InputBox = memo(function (props:Props){
     return <section className="bg-[#1e0836] rounded-xl mt-4">
         <div className="py-4 px-3">
             <div className="flex justify-center">
@@ -38,4 +38,4 @@ export default function InputBox(props:Props){
             </div>
         </div>
     </section>
-} 
+})
